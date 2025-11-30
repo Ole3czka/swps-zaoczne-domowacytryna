@@ -12,7 +12,7 @@
 // else
 //     Console.WriteLine("What's in that box?");
 
-Console.WriteLine("Let's play Rock Paper Scissors!");
+Console.WriteLine("Let's play Rock Paper Scissors, ok?");
 
 Console.WriteLine("Player 1, provide sign (rock/paper/scissors)");
 string firstSign = Console.ReadLine()!;
