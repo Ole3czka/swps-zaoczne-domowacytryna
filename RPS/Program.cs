@@ -1,4 +1,7 @@
 ﻿List<string> allowedSigns = ["rock", "paper", "scissors"];
+int firstPlayerPoints = 0;
+int secondPlayerPoints = 0;
+
 
 Console.WriteLine("Let's play Rock Paper Scissors, ok?");
 while (true)
@@ -23,11 +26,18 @@ while (true)
     else if (firstSignIndex == indexOfSignWinningWithSecondSign)
     {
         Console.WriteLine("First player won!");
+        // firstPlayerPoints = firstPlayerPoints + 1;
+        firstPlayerPoints += 1;
+        // firstPlayerPoints++;
     }
     else
     {
         Console.WriteLine("Second player won!");
+        secondPlayerPoints += 1;
     }
+
+    Console.WriteLine($"First player: {firstPlayerPoints}");
+    Console.WriteLine($"Second player: {secondPlayerPoints}");
 }
 
 string GetCorrectSign(string playerName)
