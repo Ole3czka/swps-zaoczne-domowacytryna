@@ -1,6 +1,4 @@
-﻿// typ nazwa;
-// typ nazwa = wartosc;
-List<string> allowedSigns = ["rock", "paper", "scissors"];
+﻿List<string> allowedSigns = ["rock", "paper", "scissors"];
 
 // Console.WriteLine("What's your name?");
 // string firstName = Console.ReadLine()!;
@@ -39,9 +37,6 @@ while (true)
     }
     // 4. Sprawdź czy indeks znaku pierwszej osoby jest równy indeksowi znaku wygrywającego
     //    ze znakiem drugiej osoby -> y == (x + 1) % l
-    // else if ((firstSign == allowedSigns[0] && secondSign == allowedSigns[2])
-    //     || (firstSign == allowedSigns[1] && secondSign == allowedSigns[0])
-    //     || (firstSign == allowedSigns[2] && secondSign == allowedSigns[1]))
     else if (firstSignIndex == indexOfSignWinningWithSecondSign)
     {
         Console.WriteLine("First player won!");
@@ -54,11 +49,9 @@ while (true)
 
 string GetCorrectSign(string playerName)
 {
-    // Console.WriteLine($"{playerName}, provide sign ({allowedSigns[0]}/{allowedSigns[1]}/{allowedSigns[2]})");
     Console.WriteLine($"{playerName}, provide sign ({string.Join("/", allowedSigns)})");
     string sign = Console.ReadLine()!;
     // czy podany znak NIE jest jednym z oczekiwanych?
-    // while (!(sign == allowedSigns[0] || sign == allowedSigns[1] || sign == allowedSigns[2]))
     while (!allowedSigns.Contains(sign))
     {
         // wyświetl ze znak jest niepoprawny
